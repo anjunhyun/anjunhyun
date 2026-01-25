@@ -1,5 +1,5 @@
 ---
-title: "Researcher Name"
+title: "안준현/Junhyun An"
 image: assets/profile.jpg
 about:
   template: trestles
