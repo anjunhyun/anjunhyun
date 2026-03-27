@@ -3,84 +3,77 @@ import subprocess
 
 BASE = "C:/Users/user/Desktop/personal_site"
 
-def create_seminar_structure():
-    # 폴더
-    os.makedirs(f"{BASE}/seminar", exist_ok=True)
-    os.makedirs(f"{BASE}/seminar_knot", exist_ok=True)
-    os.makedirs(f"{BASE}/assets/slides/knot", exist_ok=True)
-    os.makedirs(f"{BASE}/assets/problems/knot", exist_ok=True)
+SEMINAR_NAME = "Introduction_to_KnotTheory"
 
+def create_structure():
+    base_path = f"{BASE}/assets/seminar/{SEMINAR_NAME}"
+
+    # Week 폴더 생성
+    for i in range(1, 3):
+        os.makedirs(f"{base_path}/Week{i}", exist_ok=True)
+
+    # seminar 폴더
+    os.makedirs(f"{BASE}/seminar", exist_ok=True)
+
+def create_pages():
     # =========================
-    # seminar.qmd (허브)
+    # seminar.qmd
     # =========================
-    seminar_main = """---
+    seminar_main = f"""---
 title: "Seminars"
 ---
 
 ## Available Seminars
 
-### Knot Theory
-
-- [Introduction to Knot Theory](seminar/knot-theory.qmd)
+- [Introduction to Knot Theory](seminar/knot.qmd)
 """
 
     # =========================
-    # 세미나 선택 페이지
+    # seminar 선택 페이지
     # =========================
-    knot_page = """---
+    knot_page = f"""---
 title: "Introduction to Knot Theory"
 ---
 
 ## Weekly Contents
 
-- [Week 1](../seminar_knot/week1.qmd)
-- [Week 2](../seminar_knot/week2.qmd)
-"""
+- [Week 1](#week-1)
+- [Week 2](#week-2)
 
-    # =========================
-    # Week1
-    # =========================
-    week1 = """---
-title: "Week 1"
 ---
 
-## Slides
-<iframe src="../assets/slides/knot/week1.pdf" width="100%" height="600px"></iframe>
+## Week 1
 
-## Problems
-[Download](../assets/problems/knot/week1.pdf)
+### Slides
+<iframe src="../assets/seminar/{SEMINAR_NAME}/Week1/slide.pdf" width="100%" height="600px"></iframe>
 
-## Solutions
-[Download](../assets/problems/knot/week1_solution.pdf)
-"""
+### Problems
+[Download](../assets/seminar/{SEMINAR_NAME}/Week1/problem.pdf)
 
-    # =========================
-    # Week2
-    # =========================
-    week2 = """---
-title: "Week 2"
+### Solutions
+[Download](../assets/seminar/{SEMINAR_NAME}/Week1/solution.pdf)
+
 ---
 
-## Slides
-<iframe src="../assets/slides/knot/week2.pdf" width="100%" height="600px"></iframe>
+## Week 2
 
-## Problems
-[Download](../assets/problems/knot/week2.pdf)
+### Slides
+<iframe src="../assets/seminar/{SEMINAR_NAME}/Week2/slide.pdf" width="100%" height="600px"></iframe>
 
-## Solutions
-[Download](../assets/problems/knot/week2_solution.pdf)
+### Problems
+[Download](../assets/seminar/{SEMINAR_NAME}/Week2/problem.pdf)
+
+### Solutions
+[Download](../assets/seminar/{SEMINAR_NAME}/Week2/solution.pdf)
 """
 
     files = {
         "seminar.qmd": seminar_main,
-        "seminar/knot-theory.qmd": knot_page,
-        "seminar_knot/week1.qmd": week1,
-        "seminar_knot/week2.qmd": week2,
+        "seminar/knot.qmd": knot_page,
     }
 
     for path, content in files.items():
         full = os.path.join(BASE, path)
-        os.makedirs(os.path.dirname(full), exist_ok=True)
 
         if not os.path.exists(full):
             with open(full, "w", encoding="utf-8") as f:
@@ -105,31 +98,23 @@ def update_quarto():
             f.write(content)
 
         print("Updated _quarto.yml")
-    else:
-        print("_quarto.yml already updated")
-
-def deploy_to_github():
-    os.chdir(BASE)
-
-    subprocess.run(["git", "init"], check=False)
-    subprocess.run(["git", "add", "."], check=True)
-    subprocess.run(["git", "commit", "-m", "update seminar"], check=False)
-    subprocess.run(["git", "branch", "-M", "main"], check=False)
-
-    # 👉 여기 반드시 수정
-    repo_url = "https://github.com/anjunhyun/YOUR_REPO.git"
-
-    subprocess.run(["git", "remote", "add", "origin", repo_url], check=False)
-    subprocess.run(["git", "push", "-u", "origin", "main"], check=False)
-
-    print("🚀 Pushed to GitHub")
 
 def render():
     os.chdir(BASE)
     subprocess.run(["quarto", "render"])
 
+def deploy():
+    os.chdir(BASE)
+
+    subprocess.run(["git", "add", "."], check=True)
+    subprocess.run(["git", "commit", "-m", "add seminar"], check=False)
+    subprocess.run(["git", "push"], check=False)
+
+    print("🚀 GitHub push 완료")
+
 if __name__ == "__main__":
-    create_seminar_structure()
+    create_structure()
+    create_pages()
     update_quarto()
     render()
-    deploy_to_github()
+    deploy()

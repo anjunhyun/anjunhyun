@@ -42,18 +42,32 @@
     "text": "Download PDF"
   },
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research & Publications",
+    "objectID": "seminar/knot-theory.html",
+    "href": "seminar/knot-theory.html",
+    "title": "Introduction to Knot Theory",
     "section": "",
-    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
+    "text": "Week 1\nWeek 2"
   },
   {
-    "objectID": "research.html#working-papers",
-    "href": "research.html#working-papers",
-    "title": "Research & Publications",
+    "objectID": "seminar/knot-theory.html#weekly-contents",
+    "href": "seminar/knot-theory.html#weekly-contents",
+    "title": "Introduction to Knot Theory",
     "section": "",
-    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
+    "text": "Week 1\nWeek 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "안준현/Junhyun An",
+    "section": "",
+    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
+  },
+  {
+    "objectID": "index.html#biography",
+    "href": "index.html#biography",
+    "title": "안준현/Junhyun An",
+    "section": "",
+    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
   },
   {
     "objectID": "cv.html",
@@ -77,32 +91,46 @@
     "text": "Research Interests\n\nKnot Theory\nGraph Theory\nTopological Data Analysis (TDA)\n\n\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"assets/CV.pdf\"&gt;Download the PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "안준현/Junhyun An",
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research & Publications",
     "section": "",
-    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
+    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
   },
   {
-    "objectID": "index.html#biography",
-    "href": "index.html#biography",
-    "title": "안준현/Junhyun An",
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Research & Publications",
     "section": "",
-    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
+    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
   },
   {
-    "objectID": "seminar/knot-theory.html",
-    "href": "seminar/knot-theory.html",
+    "objectID": "seminar/knot.html",
+    "href": "seminar/knot.html",
     "title": "Introduction to Knot Theory",
     "section": "",
     "text": "Week 1\nWeek 2"
   },
   {
-    "objectID": "seminar/knot-theory.html#weekly-contents",
-    "href": "seminar/knot-theory.html#weekly-contents",
+    "objectID": "seminar/knot.html#weekly-contents",
+    "href": "seminar/knot.html#weekly-contents",
     "title": "Introduction to Knot Theory",
     "section": "",
     "text": "Week 1\nWeek 2"
+  },
+  {
+    "objectID": "seminar/knot.html#week-1",
+    "href": "seminar/knot.html#week-1",
+    "title": "Introduction to Knot Theory",
+    "section": "Week 1",
+    "text": "Week 1\n\nSlides\n\n\n\n\nProblems\nDownload\n\n\nSolutions\nDownload"
+  },
+  {
+    "objectID": "seminar/knot.html#week-2",
+    "href": "seminar/knot.html#week-2",
+    "title": "Introduction to Knot Theory",
+    "section": "Week 2",
+    "text": "Week 2\n\nSlides\n\n\n\n\nProblems\nDownload\n\n\nSolutions\nDownload"
   },
   {
     "objectID": "seminar/week2.html",
