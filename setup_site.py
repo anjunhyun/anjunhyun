@@ -35,10 +35,10 @@ def create_pages():
     # seminar.qmd
     # =========================
     seminar_main = """---
-title: "Seminars"
+title: "Seminar"
 ---
 
-## Available Seminars
+## 2026-1 SNU Student-Directed Seminar
 
 - [Introduction to Knot Theory](seminar/knot.qmd)
 """
