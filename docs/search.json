@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "seminar_knot/week2.html#problems",
-    "href": "seminar_knot/week2.html#problems",
-    "title": "Week 2",
-    "section": "Problems",
-    "text": "Problems\nDownload"
-  },
-  {
-    "objectID": "seminar_knot/week2.html#solutions",
-    "href": "seminar_knot/week2.html#solutions",
-    "title": "Week 2",
-    "section": "Solutions",
-    "text": "Solutions\nDownload"
-  },
-  {
     "objectID": "seminar.html",
     "href": "seminar.html",
     "title": "Seminar",
@@ -28,46 +14,18 @@
     "text": "Introduction to Knot Theory"
   },
   {
-    "objectID": "seminar/week1.html",
-    "href": "seminar/week1.html",
-    "title": "Week 1",
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research & Publications",
     "section": "",
-    "text": "Download PDF"
+    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
   },
   {
-    "objectID": "seminar/week1.html#slides",
-    "href": "seminar/week1.html#slides",
-    "title": "Week 1",
+    "objectID": "research.html#working-papers",
+    "href": "research.html#working-papers",
+    "title": "Research & Publications",
     "section": "",
-    "text": "Download PDF"
-  },
-  {
-    "objectID": "seminar/knot-theory.html",
-    "href": "seminar/knot-theory.html",
-    "title": "Introduction to Knot Theory",
-    "section": "",
-    "text": "Week 1\nWeek 2"
-  },
-  {
-    "objectID": "seminar/knot-theory.html#weekly-contents",
-    "href": "seminar/knot-theory.html#weekly-contents",
-    "title": "Introduction to Knot Theory",
-    "section": "",
-    "text": "Week 1\nWeek 2"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "안준현/Junhyun An",
-    "section": "",
-    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
-  },
-  {
-    "objectID": "index.html#biography",
-    "href": "index.html#biography",
-    "title": "안준현/Junhyun An",
-    "section": "",
-    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
+    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
   },
   {
     "objectID": "cv.html",
@@ -91,18 +49,18 @@
     "text": "Research Interests\n\nKnot Theory\nGraph Theory\nTopological Data Analysis (TDA)\n\n\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"assets/CV.pdf\"&gt;Download the PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research & Publications",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "안준현/Junhyun An",
     "section": "",
-    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
+    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
   },
   {
-    "objectID": "research.html#working-papers",
-    "href": "research.html#working-papers",
-    "title": "Research & Publications",
+    "objectID": "index.html#biography",
+    "href": "index.html#biography",
+    "title": "안준현/Junhyun An",
     "section": "",
-    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
+    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
   },
   {
     "objectID": "seminar/knot.html",
@@ -138,33 +96,5 @@
     "title": "Introduction to Knot Theory",
     "section": "Week 3",
     "text": "Week 3\n\nSlides\n\n\n\n\nProblems\nDownload\n\n\nSolutions\nDownload"
-  },
-  {
-    "objectID": "seminar/week2.html",
-    "href": "seminar/week2.html",
-    "title": "Week 2",
-    "section": "",
-    "text": "Download PDF"
-  },
-  {
-    "objectID": "seminar/week2.html#slides",
-    "href": "seminar/week2.html#slides",
-    "title": "Week 2",
-    "section": "",
-    "text": "Download PDF"
-  },
-  {
-    "objectID": "seminar_knot/week1.html#problems",
-    "href": "seminar_knot/week1.html#problems",
-    "title": "Week 1",
-    "section": "Problems",
-    "text": "Problems\nDownload"
-  },
-  {
-    "objectID": "seminar_knot/week1.html#solutions",
-    "href": "seminar_knot/week1.html#solutions",
-    "title": "Week 1",
-    "section": "Solutions",
-    "text": "Solutions\nDownload"
   }
 ]
