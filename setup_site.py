@@ -1,25 +1,42 @@
 import os
 import subprocess
+import re
 
 BASE = "C:/Users/user/Desktop/personal_site"
-
 SEMINAR_NAME = "Introduction_to_KnotTheory"
 
-def create_structure():
-    base_path = f"{BASE}/assets/seminar/{SEMINAR_NAME}"
+def get_weeks():
+    path = f"{BASE}/assets/seminar/{SEMINAR_NAME}"
 
-    # Week 폴더 생성
-    for i in range(1, 3):
-        os.makedirs(f"{base_path}/Week{i}", exist_ok=True)
+    if not os.path.exists(path):
+        print("❌ Seminar folder not found")
+        return []
 
-    # seminar 폴더
-    os.makedirs(f"{BASE}/seminar", exist_ok=True)
+    folders = os.listdir(path)
+
+    # Week 숫자 기준 정렬
+    def extract_num(name):
+        match = re.search(r'\d+', name)
+        return int(match.group()) if match else 0
+
+    weeks = sorted(
+        [f for f in folders if f.lower().startswith("week")],
+        key=extract_num
+    )
+
+    return weeks
 
 def create_pages():
+    weeks = get_weeks()
+
+    if not weeks:
+        print("❌ No weeks found")
+        return
+
     # =========================
     # seminar.qmd
     # =========================
-    seminar_main = f"""---
+    seminar_main = """---
 title: "Seminars"
 ---
 
@@ -29,58 +46,62 @@ title: "Seminars"
 """
 
     # =========================
-    # seminar 선택 페이지
+    # knot.qmd (자동 생성)
     # =========================
-    knot_page = f"""---
+    content = """---
 title: "Introduction to Knot Theory"
 ---
 
+**Organized by:** Junhyun An  
+**with:** Yunseong Jo, Jongho Choi
+
+**Advisor:** Prof. Gyeseon Lee  
+**Teaching Assistant:** Dongwoo Gang  
+
 ## Weekly Contents
 
-- [Week 1](#week-1)
-- [Week 2](#week-2)
+"""
 
----
+    # 목차
+    for w in weeks:
+        num = re.search(r'\d+', w).group()
+        content += f"- [Week {num}](#week-{num})\n"
 
-## Week 1
+    content += "\n---\n"
 
-### Slides
-<iframe src="../assets/seminar/{SEMINAR_NAME}/Week1/slide.pdf" width="100%" height="600px"></iframe>
+    # 본문
+    for w in weeks:
+        num = re.search(r'\d+', w).group()
 
-### Problems
-[Download](../assets/seminar/{SEMINAR_NAME}/Week1/problem.pdf)
+        base_path = f"../assets/seminar/{SEMINAR_NAME}/{w}"
 
-### Solutions
-[Download](../assets/seminar/{SEMINAR_NAME}/Week1/solution.pdf)
-
----
-
-## Week 2
+        content += f"""
+## Week {num}
 
 ### Slides
-<iframe src="../assets/seminar/{SEMINAR_NAME}/Week2/slide.pdf" width="100%" height="600px"></iframe>
+<iframe src="{base_path}/slide.pdf" width="100%" height="600px"></iframe>
 
 ### Problems
-[Download](../assets/seminar/{SEMINAR_NAME}/Week2/problem.pdf)
+[Download]({base_path}/problem.pdf)
 
 ### Solutions
-[Download](../assets/seminar/{SEMINAR_NAME}/Week2/solution.pdf)
+[Download]({base_path}/solution.pdf)
+
+---
 """
 
     files = {
         "seminar.qmd": seminar_main,
-        "seminar/knot.qmd": knot_page,
+        "seminar/knot.qmd": content,
     }
 
-    for path, content in files.items():
+    for path, text in files.items():
         full = os.path.join(BASE, path)
 
-        if not os.path.exists(full):
-            with open(full, "w", encoding="utf-8") as f:
-                f.write(content)
-            print(f"Created: {path}")
-        else:
-            print(f"Skipped: {path}")
+        with open(full, "w", encoding="utf-8") as f:
+            f.write(text)
+
+        print(f"Updated: {path}")
 
 def update_quarto():
     path = os.path.join(BASE, "_quarto.yml")
@@ -105,15 +126,13 @@ def render():
 
 def deploy():
     os.chdir(BASE)
-
     subprocess.run(["git", "add", "."], check=True)
-    subprocess.run(["git", "commit", "-m", "add seminar"], check=False)
+    subprocess.run(["git", "commit", "-m", "auto update seminar"], check=False)
     subprocess.run(["git", "push"], check=False)
 
     print("🚀 GitHub push 완료")
 
 if __name__ == "__main__":
-    create_structure()
     create_pages()
     update_quarto()
     render()

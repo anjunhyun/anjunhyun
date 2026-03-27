@@ -2,10 +2,17 @@
 title: "Introduction to Knot Theory"
 ---
 
+**Organized by:** Junhyun An  
+**with:** Yunseong Jo, Jongho Choi
+
+**Advisor:** Prof. Gyeseon Lee  
+**Teaching Assistant:** Dongwoo Gang  
+
 ## Weekly Contents
 
 - [Week 1](#week-1)
 - [Week 2](#week-2)
+- [Week 3](#week-3)
 
 ---
 
@@ -32,3 +39,18 @@ title: "Introduction to Knot Theory"
 
 ### Solutions
 [Download](../assets/seminar/Introduction_to_KnotTheory/Week2/solution.pdf)
+
+---
+
+## Week 3
+
+### Slides
+<iframe src="../assets/seminar/Introduction_to_KnotTheory/Week3/slide.pdf" width="100%" height="600px"></iframe>
+
+### Problems
+[Download](../assets/seminar/Introduction_to_KnotTheory/Week3/problem.pdf)
+
+### Solutions
+[Download](../assets/seminar/Introduction_to_KnotTheory/Week3/solution.pdf)
+
+---
