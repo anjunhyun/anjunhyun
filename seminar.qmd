@@ -1,0 +1,21 @@
+---
+title: "Seminar"
+---
+
+## Knot Theory Seminar
+
+::: {.grid}
+::: {.g-col-6}
+
+### Week 1  
+[📄 View Slides](seminar/week1.qmd)
+
+:::
+
+::: {.g-col-6}
+
+### Week 2  
+[📄 View Slides](seminar/week2.qmd)
+
+:::
+:::

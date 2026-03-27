@@ -8,4 +8,3 @@ title: "Research & Publications"
  <br> [[PDF]](assets/GRP_in_Euclidean_Graph.pdf) 
 
 - **Subsampling Confidence Bound for Persistent Diagram via Time-delay Embedding**
-

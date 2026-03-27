@@ -1,0 +1,8 @@
+---
+title: "Introduction to Knot Theory"
+---
+
+## Weekly Contents
+
+- [Week 1](../seminar_knot/week1.qmd)
+- [Week 2](../seminar_knot/week2.qmd)

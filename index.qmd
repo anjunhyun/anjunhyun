@@ -17,15 +17,3 @@ about:
 I am a undergraduate student in the **Department of Statistics at Seoul National University (SNU)**. 
 
 My research interests lie at the intersection of **Graph Theory**, **Knot Theory**, and **Topological Data Analysis (TDA)**.
-
-## Education
-
-- **Seoul National University** | Seoul, South Korea
-  <br> B.S. in Statistics & Mathematics (Current)
-
-## Interests
-
-- Knot Theory
-- Graph Theory
-- Algebraic Topology & Persistent Homology
-- Statistical Inference for TDA

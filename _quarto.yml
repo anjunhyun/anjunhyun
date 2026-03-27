@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - assets/
 
 website:
   title: "안준현(An JunHyun) site"
@@ -10,6 +12,8 @@ website:
         text: Home
       - href: research.qmd
         text: Research
+      - href: seminar.qmd
+        text: Seminar
       - href: cv.qmd
         text: CV
     right:
