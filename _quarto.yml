@@ -6,6 +6,8 @@ project:
 
 website:
   title: "안준현(An JunHyun) site"
+  site-url: "https://anjunhyun.github.io/anjunhyun"
+
   navbar:
     left:
       - href: index.qmd

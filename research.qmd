@@ -1,10 +1,7 @@
 ---
-title: "Research & Publications"
+title: "Research"
 ---
 
 ## Working Papers
 
-- **On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs**
- <br> [[PDF]](assets/GRP_in_Euclidean_Graph.pdf) 
-
-- **Subsampling Confidence Bound for Persistent Diagram via Time-delay Embedding**
+- On the Computational Complexity of Euclidean Graph Problems

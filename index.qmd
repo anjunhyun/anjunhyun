@@ -1,19 +1,16 @@
 ---
-title: "안준현/Junhyun An"
+title: "안준현 / Junhyun An"
 image: assets/profile.jpg
 about:
   template: trestles
-  links:
-    - icon: github
-      text: Github
-      href: https://github.com/anjunhyun
-    - icon: envelope
-      text: Email
-      href: mailto:anjunhyun@snu.ac.kr
 ---
 
 ## Biography
 
-I am a undergraduate student in the **Department of Statistics at Seoul National University (SNU)**. 
+I am a undergraduate student in Statistics at SNU.
 
-My research interests lie at the intersection of **Graph Theory**, **Knot Theory**, and **Topological Data Analysis (TDA)**.
+## Research Interests
+
+- Knot Theory
+- Graph Theory
+- Topological Data Analysis

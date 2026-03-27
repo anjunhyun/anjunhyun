@@ -18,7 +18,7 @@ title: "Introduction to Knot Theory"
 
 ---
 
-## Week 1
+## Week 1 {#week-1}
 
 ### Slides
 <iframe src="../assets/seminar/Introduction_to_KnotTheory/Week1/slide.pdf" width="100%" height="600px"></iframe>
@@ -31,7 +31,7 @@ title: "Introduction to Knot Theory"
 
 ---
 
-## Week 2
+## Week 2 {#week-2}
 
 ### Slides
 <iframe src="../assets/seminar/Introduction_to_KnotTheory/Week2/slide.pdf" width="100%" height="600px"></iframe>
@@ -44,7 +44,7 @@ title: "Introduction to Knot Theory"
 
 ---
 
-## Week 3
+## Week 3 {#week-3}
 
 ### Slides
 <iframe src="../assets/seminar/Introduction_to_KnotTheory/Week3/slide.pdf" width="100%" height="600px"></iframe>
