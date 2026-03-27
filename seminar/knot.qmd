@@ -3,10 +3,12 @@ title: "Introduction to Knot Theory"
 ---
 
 **Organized by:** Junhyun An  
-**with:** Yunseong Jo, Jongho Choi
+**with:** Yunseong Jo, Jongho Choi  
 
 **Advisor:** Prof. Gyeseon Lee  
 **Teaching Assistant:** Dongwoo Gang  
+
+---
 
 ## Weekly Contents
 

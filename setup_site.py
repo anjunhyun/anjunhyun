@@ -1,5 +1,4 @@
 import os
-import subprocess
 import re
 
 BASE = "C:/Users/user/Desktop/personal_site"
@@ -14,7 +13,6 @@ def get_weeks():
 
     folders = os.listdir(path)
 
-    # Week 숫자 기준 정렬
     def extract_num(name):
         match = re.search(r'\d+', name)
         return int(match.group()) if match else 0
@@ -46,17 +44,19 @@ title: "Seminars"
 """
 
     # =========================
-    # knot.qmd (자동 생성)
+    # knot.qmd
     # =========================
     content = """---
 title: "Introduction to Knot Theory"
 ---
 
 **Organized by:** Junhyun An  
-**with:** Yunseong Jo, Jongho Choi
+**with:** Yunseong Jo, Jongho Choi  
 
 **Advisor:** Prof. Gyeseon Lee  
 **Teaching Assistant:** Dongwoo Gang  
+
+---
 
 ## Weekly Contents
 
@@ -72,7 +72,6 @@ title: "Introduction to Knot Theory"
     # 본문
     for w in weeks:
         num = re.search(r'\d+', w).group()
-
         base_path = f"../assets/seminar/{SEMINAR_NAME}/{w}"
 
         content += f"""
@@ -97,6 +96,7 @@ title: "Introduction to Knot Theory"
 
     for path, text in files.items():
         full = os.path.join(BASE, path)
+        os.makedirs(os.path.dirname(full), exist_ok=True)
 
         with open(full, "w", encoding="utf-8") as f:
             f.write(text)
@@ -119,21 +119,16 @@ def update_quarto():
             f.write(content)
 
         print("Updated _quarto.yml")
-
-def render():
-    os.chdir(BASE)
-    subprocess.run(["quarto", "render"])
-
-def deploy():
-    os.chdir(BASE)
-    subprocess.run(["git", "add", "."], check=True)
-    subprocess.run(["git", "commit", "-m", "auto update seminar"], check=False)
-    subprocess.run(["git", "push"], check=False)
-
-    print("🚀 GitHub push 완료")
+    else:
+        print("_quarto.yml already has Seminar")
 
 if __name__ == "__main__":
     create_pages()
     update_quarto()
-    render()
-    deploy()
+
+    print("\n✅ Setup complete!")
+    print("➡️ Next steps:")
+    print("1. quarto render")
+    print("2. git add .")
+    print("3. git commit -m 'update seminar'")
+    print("4. git push")
