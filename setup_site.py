@@ -4,6 +4,7 @@ import re
 BASE = "C:/Users/user/Desktop/personal_site"
 SEMINAR_NAME = "Introduction_to_KnotTheory"
 
+
 # =========================
 # Week 자동 탐색
 # =========================
@@ -34,15 +35,14 @@ def get_weeks():
 # =========================
 def create_base_files():
 
+    # _quarto.yml: Seminar 탭 포함, gh-pages 방식이므로 output-dir 없음
     quarto_config = """project:
   type: website
-  output-dir: docs
   resources:
     - assets/
 
 website:
   title: "안준현(An JunHyun) site"
-  site-url: "https://anjunhyun.github.io/anjunhyun"
 
   navbar:
     left:
@@ -68,41 +68,74 @@ format:
 """
 
     index_content = """---
-title: "안준현 / Junhyun An"
+title: "안준현/Junhyun An"
 image: assets/profile.jpg
 about:
   template: trestles
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/anjunhyun
+    - icon: envelope
+      text: Email
+      href: mailto:anjunhyun@snu.ac.kr
 ---
 
 ## Biography
 
-I am a undergraduate student in Statistics at SNU.
+I am a undergraduate student in the **Department of Statistics at Seoul National University (SNU)**. 
+My research interests lie at the intersection of **Graph Theory**, **Knot Theory**, and **Topological Data Analysis (TDA)**.
+
+## Education
+
+- **Seoul National University** | Seoul, South Korea
+  <br> B.S. in Statistics & Mathematics (Current)
+
+## Interests
+
+- Knot Theory
+- Graph Theory
+- Algebraic Topology & Persistent Homology
+- Statistical Inference for TDA
+"""
+
+    research_content = """---
+title: "Research & Publications"
+---
+
+## Working Papers
+
+- **On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs**
+ <br> [[PDF]](assets/GRP_in_Euclidean_Graph.pdf) 
+
+- **Subsampling Confidence Bound for Persistent Diagram via Time-delay Embedding**
+"""
+
+    cv_content = """---
+title: "Curriculum Vitae"
+---
+
+## Education
+
+**Seoul National University** | Seoul, South Korea
+<br> B.S. in Statistics & Mathematics (Current)
 
 ## Research Interests
 
 - Knot Theory
 - Graph Theory
-- Topological Data Analysis
-"""
+- Topological Data Analysis (TDA)
 
-    research_content = """---
-title: "Research"
----
+<br>
 
-## Working Papers
-
-- On the Computational Complexity of Euclidean Graph Problems
-"""
-
-    cv_content = """---
-title: "CV"
----
-
-<iframe src="assets/CV.pdf" width="100%" height="800px"></iframe>
+<iframe src="assets/CV.pdf" width="100%" height="800px" style="border: none;">
+    <p>Your browser does not support PDFs. 
+    <a href="assets/CV.pdf">Download the PDF</a>.</p>
+</iframe>
 """
 
     css_content = """body {
-    font-family: -apple-system, BlinkMacSystemFont;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ── PDF 토글 버튼 ── */
@@ -153,19 +186,37 @@ title: "CV"
 }
 """
 
-    files = {
+    # _quarto.yml, styles.css, research.qmd, cv.qmd: 항상 원본으로 덮어씀
+    always_overwrite = {
         "_quarto.yml": quarto_config,
-        "index.qmd": index_content,
+        "styles.css": css_content,
         "research.qmd": research_content,
         "cv.qmd": cv_content,
-        "styles.css": css_content
+        "index.qmd": index_content,
     }
 
-    for name, content in files.items():
+    # index.qmd: 이미 있으면 건너뜀 (프로필 사진 등 직접 편집 가능성)
+    create_if_missing = {
+	None,
+    }
+
+    for name, content in always_overwrite.items():
         path = os.path.join(BASE, name)
         with open(path, "w", encoding="utf-8") as f:
             f.write(content)
-        print(f"✅ Created: {name}")
+        print(f"✅ Updated: {name}")
+
+    try:
+        for name, content in create_if_missing.items():
+            path = os.path.join(BASE, name)
+            if os.path.exists(path):
+                print(f"⏭️  Skipped (already exists): {name}")
+            else:
+                with open(path, "w", encoding="utf-8") as f:
+                    f.write(content)
+                print(f"✅ Created: {name}")
+    except:
+        print("All files are modified")
 
 
 # =========================
@@ -184,7 +235,6 @@ title: "Seminar"
 - [Introduction to Knot Theory](seminar/knot.qmd)
 """
 
-    # ── 토글 JS (페이지 상단에 한 번만 삽입) ──
     toggle_script = """
 <script>
 function togglePdf(btn, boxId) {
@@ -192,7 +242,6 @@ function togglePdf(btn, boxId) {
     const isOpen = box.classList.contains('open');
     box.classList.toggle('open', !isOpen);
     btn.classList.toggle('open', !isOpen);
-    // lazy-load: src를 data-src에서 가져옴
     if (!isOpen) {
         const iframe = box.querySelector('iframe');
         if (iframe && iframe.dataset.src) {
@@ -229,8 +278,7 @@ title: "Introduction to Knot Theory"
 
     content += "\n---\n"
 
-    # ── 본문: 각 week ──
-    # seminar/knot.qmd 기준으로 assets 경로는 ../assets/...
+    # 본문: 각 week
     for w in weeks:
         num = re.search(r'\d+', w).group()
         base_path = f"../assets/seminar/{SEMINAR_NAME}/{w}"
@@ -238,9 +286,6 @@ title: "Introduction to Knot Theory"
         slide_box_id = f"slide-box-{num}"
         slide_btn_id = f"slide-btn-{num}"
 
-        # ✅ 수정: f-string 안에서 {{#week-{num}}} → {#week-N} (올바른 Quarto 앵커 문법)
-        #         기존 코드의 {{{{#week-{num}}}}} 는 {{#week-N}} 이 되어 앵커가 깨졌음
-        #         .replace("{num}", num) 혼용도 제거하고 f-string만 사용
         content += f"""
 ## Week {num} {{#week-{num}}}
 
@@ -277,16 +322,11 @@ title: "Introduction to Knot Theory"
 
 
 # =========================
-# 필수 폴더 + nojekyll
+# 필수 폴더 생성
 # =========================
 def create_structure():
     os.makedirs(f"{BASE}/assets/seminar/{SEMINAR_NAME}", exist_ok=True)
-    os.makedirs(f"{BASE}/docs", exist_ok=True)
-
-    # docs/.nojekyll 과 루트 .nojekyll 둘 다 생성 (gh-pages 브랜치 배포 대비)
-    with open(os.path.join(BASE, "docs/.nojekyll"), "w") as f:
-        pass
-
+    os.makedirs(f"{BASE}/seminar", exist_ok=True)
     print("✅ Structure ready")
 
 
@@ -302,7 +342,4 @@ if __name__ == "__main__":
 
     print("\n✅ DONE")
     print("➡️  Run:")
-    print("quarto render")
-    print("git add .")
-    print("git commit -m 'update seminar'")
-    print("git push")
+    print('quarto publish gh-pages') # 빌드 + 배포 한번에

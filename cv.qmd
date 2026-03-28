@@ -1,5 +1,21 @@
 ---
-title: "CV"
+title: "Curriculum Vitae"
 ---
 
-<iframe src="assets/CV.pdf" width="100%" height="800px"></iframe>
+## Education
+
+**Seoul National University** | Seoul, South Korea
+<br> B.S. in Statistics & Mathematics (Current)
+
+## Research Interests
+
+- Knot Theory
+- Graph Theory
+- Topological Data Analysis (TDA)
+
+<br>
+
+<iframe src="assets/CV.pdf" width="100%" height="800px" style="border: none;">
+    <p>Your browser does not support PDFs. 
+    <a href="assets/CV.pdf">Download the PDF</a>.</p>
+</iframe>

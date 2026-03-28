@@ -1,12 +1,10 @@
 project:
   type: website
-  output-dir: docs
   resources:
     - assets/
 
 website:
   title: "안준현(An JunHyun) site"
-  site-url: "https://anjunhyun.github.io/anjunhyun"
 
   navbar:
     left:

@@ -9,7 +9,6 @@ function togglePdf(btn, boxId) {
     const isOpen = box.classList.contains('open');
     box.classList.toggle('open', !isOpen);
     btn.classList.toggle('open', !isOpen);
-    // lazy-load: src를 data-src에서 가져옴
     if (!isOpen) {
         const iframe = box.querySelector('iframe');
         if (iframe && iframe.dataset.src) {
