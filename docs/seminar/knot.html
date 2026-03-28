@@ -178,6 +178,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<script>
+function togglePdf(btn, boxId) {
+    const box = document.getElementById(boxId);
+    const isOpen = box.classList.contains('open');
+    box.classList.toggle('open', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    // lazy-load: src를 data-src에서 가져옴
+    if (!isOpen) {
+        const iframe = box.querySelector('iframe');
+        if (iframe && iframe.dataset.src) {
+            iframe.src = iframe.dataset.src;
+            delete iframe.dataset.src;
+        }
+    }
+}
+</script>
 <p><strong>Organized by:</strong> Junhyun An<br>
 <strong>with:</strong> Yunseong Jo, Jongho Choi</p>
 <p><strong>Advisor:</strong> Prof.&nbsp;Gyeseon Lee<br>
@@ -196,16 +212,20 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="week-1">Week 1</h2>
 <section id="slides" class="level3">
 <h3 class="anchored" data-anchor-id="slides">Slides</h3>
-<iframe src="../assets/seminar/Introduction_to_KnotTheory/Week1/slide.pdf" width="100%" height="600px">
-</iframe>
+<button class="pdf-toggle-btn" id="slide-btn-1" onclick="togglePdf(this, 'slide-box-1')">
+<span class="arrow">▶</span> Slide 미리보기
+</button>
+<div id="slide-box-1" class="pdf-preview-box">
+<p><iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week1/slide.pdf"></iframe></p>
+</div>
 </section>
 <section id="problems" class="level3">
 <h3 class="anchored" data-anchor-id="problems">Problems</h3>
-<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week1/problem.pdf">Download</a></p>
+<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week1/problem.pdf" target="_blank">📄 Problem 다운로드</a></p>
 </section>
 <section id="solutions" class="level3">
 <h3 class="anchored" data-anchor-id="solutions">Solutions</h3>
-<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week1/solution.pdf">Download</a></p>
+<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week1/solution.pdf" target="_blank">📄 Solution 다운로드</a></p>
 <hr>
 </section>
 </section>
@@ -213,16 +233,20 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="week-2">Week 2</h2>
 <section id="slides-1" class="level3">
 <h3 class="anchored" data-anchor-id="slides-1">Slides</h3>
-<iframe src="../assets/seminar/Introduction_to_KnotTheory/Week2/slide.pdf" width="100%" height="600px">
-</iframe>
+<button class="pdf-toggle-btn" id="slide-btn-2" onclick="togglePdf(this, 'slide-box-2')">
+<span class="arrow">▶</span> Slide 미리보기
+</button>
+<div id="slide-box-2" class="pdf-preview-box">
+<p><iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week2/slide.pdf"></iframe></p>
+</div>
 </section>
 <section id="problems-1" class="level3">
 <h3 class="anchored" data-anchor-id="problems-1">Problems</h3>
-<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week2/problem.pdf">Download</a></p>
+<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week2/problem.pdf" target="_blank">📄 Problem 다운로드</a></p>
 </section>
 <section id="solutions-1" class="level3">
 <h3 class="anchored" data-anchor-id="solutions-1">Solutions</h3>
-<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week2/solution.pdf">Download</a></p>
+<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week2/solution.pdf" target="_blank">📄 Solution 다운로드</a></p>
 <hr>
 </section>
 </section>
@@ -230,16 +254,20 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="week-3">Week 3</h2>
 <section id="slides-2" class="level3">
 <h3 class="anchored" data-anchor-id="slides-2">Slides</h3>
-<iframe src="../assets/seminar/Introduction_to_KnotTheory/Week3/slide.pdf" width="100%" height="600px">
-</iframe>
+<button class="pdf-toggle-btn" id="slide-btn-3" onclick="togglePdf(this, 'slide-box-3')">
+<span class="arrow">▶</span> Slide 미리보기
+</button>
+<div id="slide-box-3" class="pdf-preview-box">
+<p><iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week3/slide.pdf"></iframe></p>
+</div>
 </section>
 <section id="problems-2" class="level3">
 <h3 class="anchored" data-anchor-id="problems-2">Problems</h3>
-<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week3/problem.pdf">Download</a></p>
+<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week3/problem.pdf" target="_blank">📄 Problem 다운로드</a></p>
 </section>
 <section id="solutions-2" class="level3">
 <h3 class="anchored" data-anchor-id="solutions-2">Solutions</h3>
-<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week3/solution.pdf">Download</a></p>
+<p><a href="../assets/seminar/Introduction_to_KnotTheory/Week3/solution.pdf" target="_blank">📄 Solution 다운로드</a></p>
 <hr>
 
 

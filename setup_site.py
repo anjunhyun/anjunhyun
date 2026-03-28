@@ -20,7 +20,6 @@ def get_weeks():
     weeks = []
     for item in items:
         full_path = os.path.join(path, item)
-
         if os.path.isdir(full_path) and re.match(r'^Week\d+$', item):
             weeks.append(item)
 
@@ -105,6 +104,53 @@ title: "CV"
     css_content = """body {
     font-family: -apple-system, BlinkMacSystemFont;
 }
+
+/* ── PDF 토글 버튼 ── */
+.pdf-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #2c7be5;
+    background: transparent;
+    border: 1.5px solid #2c7be5;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    margin-bottom: 6px;
+}
+.pdf-toggle-btn:hover {
+    background: #2c7be5;
+    color: #fff;
+}
+.pdf-toggle-btn .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.pdf-toggle-btn.open .arrow {
+    transform: rotate(90deg);
+}
+
+/* ── PDF 미리보기 박스 ── */
+.pdf-preview-box {
+    display: none;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.pdf-preview-box.open {
+    display: block;
+}
+.pdf-preview-box iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    display: block;
+}
 """
 
     files = {
@@ -119,7 +165,7 @@ title: "CV"
         path = os.path.join(BASE, name)
         with open(path, "w", encoding="utf-8") as f:
             f.write(content)
-        print(f"Created: {name}")
+        print(f"✅ Created: {name}")
 
 
 # =========================
@@ -138,9 +184,31 @@ title: "Seminar"
 - [Introduction to Knot Theory](seminar/knot.qmd)
 """
 
-    content = """---
+    # ── 토글 JS (페이지 상단에 한 번만 삽입) ──
+    toggle_script = """
+<script>
+function togglePdf(btn, boxId) {
+    const box = document.getElementById(boxId);
+    const isOpen = box.classList.contains('open');
+    box.classList.toggle('open', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    // lazy-load: src를 data-src에서 가져옴
+    if (!isOpen) {
+        const iframe = box.querySelector('iframe');
+        if (iframe && iframe.dataset.src) {
+            iframe.src = iframe.dataset.src;
+            delete iframe.dataset.src;
+        }
+    }
+}
+</script>
+"""
+
+    content = f"""---
 title: "Introduction to Knot Theory"
 ---
+
+{toggle_script}
 
 **Organized by:** Junhyun An  
 **with:** Yunseong Jo, Jongho Choi  
@@ -161,22 +229,38 @@ title: "Introduction to Knot Theory"
 
     content += "\n---\n"
 
-    # 본문
+    # ── 본문: 각 week ──
+    # seminar/knot.qmd 기준으로 assets 경로는 ../assets/...
     for w in weeks:
         num = re.search(r'\d+', w).group()
         base_path = f"../assets/seminar/{SEMINAR_NAME}/{w}"
 
+        slide_box_id = f"slide-box-{num}"
+        slide_btn_id = f"slide-btn-{num}"
+
+        # ✅ 수정: f-string 안에서 {{#week-{num}}} → {#week-N} (올바른 Quarto 앵커 문법)
+        #         기존 코드의 {{{{#week-{num}}}}} 는 {{#week-N}} 이 되어 앵커가 깨졌음
+        #         .replace("{num}", num) 혼용도 제거하고 f-string만 사용
         content += f"""
 ## Week {num} {{#week-{num}}}
 
 ### Slides
-<iframe src="{base_path}/slide.pdf" width="100%" height="600px"></iframe>
+
+<button class="pdf-toggle-btn" id="{slide_btn_id}"
+        onclick="togglePdf(this, '{slide_box_id}')">
+  <span class="arrow">▶</span> Slide 미리보기
+</button>
+<div class="pdf-preview-box" id="{slide_box_id}">
+  <iframe data-src="{base_path}/slide.pdf"></iframe>
+</div>
 
 ### Problems
-[Download]({base_path}/problem.pdf)
+
+<a href="{base_path}/problem.pdf" target="_blank">📄 Problem 다운로드</a>
 
 ### Solutions
-[Download]({base_path}/solution.pdf)
+
+<a href="{base_path}/solution.pdf" target="_blank">📄 Solution 다운로드</a>
 
 ---
 """
@@ -199,7 +283,7 @@ def create_structure():
     os.makedirs(f"{BASE}/assets/seminar/{SEMINAR_NAME}", exist_ok=True)
     os.makedirs(f"{BASE}/docs", exist_ok=True)
 
-    # 🔥 핵심
+    # docs/.nojekyll 과 루트 .nojekyll 둘 다 생성 (gh-pages 브랜치 배포 대비)
     with open(os.path.join(BASE, "docs/.nojekyll"), "w") as f:
         pass
 
@@ -217,8 +301,8 @@ if __name__ == "__main__":
     create_seminar_pages()
 
     print("\n✅ DONE")
-    print("➡️ Run:")
-    print("   quarto render")
-    print("   git add .")
-    print("   git commit -m 'init site'")
-    print("   git push")
+    print("➡️  Run:")
+    print("quarto render")
+    print("git add .")
+    print("git commit -m 'update seminar'")
+    print("git push")

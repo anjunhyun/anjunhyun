@@ -2,6 +2,25 @@
 title: "Introduction to Knot Theory"
 ---
 
+
+<script>
+function togglePdf(btn, boxId) {
+    const box = document.getElementById(boxId);
+    const isOpen = box.classList.contains('open');
+    box.classList.toggle('open', !isOpen);
+    btn.classList.toggle('open', !isOpen);
+    // lazy-load: src를 data-src에서 가져옴
+    if (!isOpen) {
+        const iframe = box.querySelector('iframe');
+        if (iframe && iframe.dataset.src) {
+            iframe.src = iframe.dataset.src;
+            delete iframe.dataset.src;
+        }
+    }
+}
+</script>
+
+
 **Organized by:** Junhyun An  
 **with:** Yunseong Jo, Jongho Choi  
 
@@ -21,38 +40,65 @@ title: "Introduction to Knot Theory"
 ## Week 1 {#week-1}
 
 ### Slides
-<iframe src="../assets/seminar/Introduction_to_KnotTheory/Week1/slide.pdf" width="100%" height="600px"></iframe>
+
+<button class="pdf-toggle-btn" id="slide-btn-1"
+        onclick="togglePdf(this, 'slide-box-1')">
+  <span class="arrow">▶</span> Slide 미리보기
+</button>
+<div class="pdf-preview-box" id="slide-box-1">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week1/slide.pdf"></iframe>
+</div>
 
 ### Problems
-[Download](../assets/seminar/Introduction_to_KnotTheory/Week1/problem.pdf)
+
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week1/problem.pdf" target="_blank">📄 Problem 다운로드</a>
 
 ### Solutions
-[Download](../assets/seminar/Introduction_to_KnotTheory/Week1/solution.pdf)
+
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week1/solution.pdf" target="_blank">📄 Solution 다운로드</a>
 
 ---
 
 ## Week 2 {#week-2}
 
 ### Slides
-<iframe src="../assets/seminar/Introduction_to_KnotTheory/Week2/slide.pdf" width="100%" height="600px"></iframe>
+
+<button class="pdf-toggle-btn" id="slide-btn-2"
+        onclick="togglePdf(this, 'slide-box-2')">
+  <span class="arrow">▶</span> Slide 미리보기
+</button>
+<div class="pdf-preview-box" id="slide-box-2">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week2/slide.pdf"></iframe>
+</div>
 
 ### Problems
-[Download](../assets/seminar/Introduction_to_KnotTheory/Week2/problem.pdf)
+
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week2/problem.pdf" target="_blank">📄 Problem 다운로드</a>
 
 ### Solutions
-[Download](../assets/seminar/Introduction_to_KnotTheory/Week2/solution.pdf)
+
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week2/solution.pdf" target="_blank">📄 Solution 다운로드</a>
 
 ---
 
 ## Week 3 {#week-3}
 
 ### Slides
-<iframe src="../assets/seminar/Introduction_to_KnotTheory/Week3/slide.pdf" width="100%" height="600px"></iframe>
+
+<button class="pdf-toggle-btn" id="slide-btn-3"
+        onclick="togglePdf(this, 'slide-box-3')">
+  <span class="arrow">▶</span> Slide 미리보기
+</button>
+<div class="pdf-preview-box" id="slide-box-3">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week3/slide.pdf"></iframe>
+</div>
 
 ### Problems
-[Download](../assets/seminar/Introduction_to_KnotTheory/Week3/problem.pdf)
+
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week3/problem.pdf" target="_blank">📄 Problem 다운로드</a>
 
 ### Solutions
-[Download](../assets/seminar/Introduction_to_KnotTheory/Week3/solution.pdf)
+
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week3/solution.pdf" target="_blank">📄 Solution 다운로드</a>
 
 ---
