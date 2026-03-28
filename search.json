@@ -1,65 +1,86 @@
 [
   {
+    "objectID": "seminar.html",
+    "href": "seminar.html",
+    "title": "Seminar",
+    "section": "",
+    "text": "Introduction to Knot Theory"
+  },
+  {
+    "objectID": "seminar.html#snu-student-directed-seminar",
+    "href": "seminar.html#snu-student-directed-seminar",
+    "title": "Seminar",
+    "section": "",
+    "text": "Introduction to Knot Theory"
+  },
+  {
     "objectID": "research.html",
     "href": "research.html",
-    "title": "Research & Publications",
+    "title": "Research",
     "section": "",
-    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
+    "text": "On the Computational Complexity of Euclidean Graph Problems"
   },
   {
     "objectID": "research.html#working-papers",
     "href": "research.html#working-papers",
-    "title": "Research & Publications",
+    "title": "Research",
     "section": "",
-    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Seoul National University | Seoul, South Korea  B.S. in Statistics & Mathematics (Current)"
-  },
-  {
-    "objectID": "cv.html#education",
-    "href": "cv.html#education",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Seoul National University | Seoul, South Korea  B.S. in Statistics & Mathematics (Current)"
-  },
-  {
-    "objectID": "cv.html#research-interests",
-    "href": "cv.html#research-interests",
-    "title": "Curriculum Vitae",
-    "section": "Research Interests",
-    "text": "Research Interests\n\nKnot Theory\nGraph Theory\nTopological Data Analysis (TDA)\n\n\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"assets/CV.pdf\"&gt;Download the PDF&lt;/a&gt;.\n&lt;/p&gt;"
+    "text": "On the Computational Complexity of Euclidean Graph Problems"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "안준현/Junhyun An",
+    "title": "안준현 / Junhyun An",
     "section": "",
-    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
+    "text": "I am a undergraduate student in Statistics at SNU."
   },
   {
     "objectID": "index.html#biography",
     "href": "index.html#biography",
-    "title": "안준현/Junhyun An",
+    "title": "안준현 / Junhyun An",
     "section": "",
-    "text": "I am a undergraduate student in the Department of Statistics at Seoul National University (SNU).\nMy research interests lie at the intersection of Graph Theory, Knot Theory, and Topological Data Analysis (TDA)."
+    "text": "I am a undergraduate student in Statistics at SNU."
   },
   {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "안준현/Junhyun An",
-    "section": "Education",
-    "text": "Education\n\nSeoul National University | Seoul, South Korea  B.S. in Statistics & Mathematics (Current)"
+    "objectID": "index.html#research-interests",
+    "href": "index.html#research-interests",
+    "title": "안준현 / Junhyun An",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nKnot Theory\nGraph Theory\nTopological Data Analysis"
   },
   {
-    "objectID": "index.html#interests",
-    "href": "index.html#interests",
-    "title": "안준현/Junhyun An",
-    "section": "Interests",
-    "text": "Interests\n\nKnot Theory\nGraph Theory\nAlgebraic Topology & Persistent Homology\nStatistical Inference for TDA"
+    "objectID": "seminar/knot.html",
+    "href": "seminar/knot.html",
+    "title": "Introduction to Knot Theory",
+    "section": "",
+    "text": "Organized by: Junhyun An\nwith: Yunseong Jo, Jongho Choi\nAdvisor: Prof. Gyeseon Lee\nTeaching Assistant: Dongwoo Gang"
+  },
+  {
+    "objectID": "seminar/knot.html#weekly-contents",
+    "href": "seminar/knot.html#weekly-contents",
+    "title": "Introduction to Knot Theory",
+    "section": "Weekly Contents",
+    "text": "Weekly Contents\n\nWeek 1\nWeek 2\nWeek 3"
+  },
+  {
+    "objectID": "seminar/knot.html#week-1",
+    "href": "seminar/knot.html#week-1",
+    "title": "Introduction to Knot Theory",
+    "section": "Week 1",
+    "text": "Week 1\n\nSlides\n\n▶ Slide 미리보기\n\n\n\n\n\n\nProblems\n📄 Problem 다운로드\n\n\nSolutions\n📄 Solution 다운로드"
+  },
+  {
+    "objectID": "seminar/knot.html#week-2",
+    "href": "seminar/knot.html#week-2",
+    "title": "Introduction to Knot Theory",
+    "section": "Week 2",
+    "text": "Week 2\n\nSlides\n\n▶ Slide 미리보기\n\n\n\n\n\n\nProblems\n📄 Problem 다운로드\n\n\nSolutions\n📄 Solution 다운로드"
+  },
+  {
+    "objectID": "seminar/knot.html#week-3",
+    "href": "seminar/knot.html#week-3",
+    "title": "Introduction to Knot Theory",
+    "section": "Week 3",
+    "text": "Week 3\n\nSlides\n\n▶ Slide 미리보기\n\n\n\n\n\n\nProblems\n📄 Problem 다운로드\n\n\nSolutions\n📄 Solution 다운로드"
   }
 ]
