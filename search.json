@@ -16,16 +16,37 @@
   {
     "objectID": "research.html",
     "href": "research.html",
-    "title": "Research",
+    "title": "Research & Publications",
     "section": "",
-    "text": "On the Computational Complexity of Euclidean Graph Problems"
+    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
   },
   {
     "objectID": "research.html#working-papers",
     "href": "research.html#working-papers",
-    "title": "Research",
+    "title": "Research & Publications",
     "section": "",
-    "text": "On the Computational Complexity of Euclidean Graph Problems"
+    "text": "On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs  [PDF]\nSubsampling Confidence Bound for Persistent Diagram via Time-delay Embedding"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Seoul National University | Seoul, South Korea  B.S. in Statistics & Mathematics (Current)"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Seoul National University | Seoul, South Korea  B.S. in Statistics & Mathematics (Current)"
+  },
+  {
+    "objectID": "cv.html#research-interests",
+    "href": "cv.html#research-interests",
+    "title": "Curriculum Vitae",
+    "section": "Research Interests",
+    "text": "Research Interests\n\nKnot Theory\nGraph Theory\nTopological Data Analysis (TDA)\n\n\n\n&lt;p&gt;\nYour browser does not support PDFs. &lt;a href=\"assets/CV.pdf\"&gt;Download the PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
     "objectID": "index.html",
