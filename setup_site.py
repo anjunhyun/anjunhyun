@@ -295,50 +295,44 @@ title: "Introduction to Knot Theory"
         )
 
         content += f"""
-    <details>
+<details>
+<summary><strong>Week {num}</strong></summary>
 
-    <summary><strong>Week {num}</strong></summary>
+<h3>Slides</h3>
 
-    <br>
+<button class="pdf-toggle-btn" id="{slide_btn_id}"
+        onclick="togglePdf(this, '{slide_box_id}')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    ### Slides
-
-    <button class="pdf-toggle-btn" id="{slide_btn_id}"
-            onclick="togglePdf(this, '{slide_box_id}')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
-
-    <div class="pdf-preview-box" id="{slide_box_id}">
-      <iframe data-src="{base_path}/slide.pdf"></iframe>
-    </div>
-    """
+<div class="pdf-preview-box" id="{slide_box_id}">
+  <iframe data-src="{base_path}/slide.pdf"></iframe>
+</div>
+"""
 
         if os.path.exists(problem_file):
             content += f"""
+<h3>Problems</h3>
 
-    ### Problems
-
-    <a href="{base_path}/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    """
+<a href="{base_path}/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
+"""
 
         if os.path.exists(solution_file):
             content += f"""
+<h3>Solutions</h3>
 
-    ### Solutions
-
-    <a href="{base_path}/solution.pdf" target="_blank">
-    📄 Solution Download
-    </a>
-    """
+<a href="{base_path}/solution.pdf" target="_blank">
+📄 Solution Download
+</a>
+"""
 
         content += """
+</details>
 
-    </details>
-
-    ---
-    """
+---
+"""
 
     os.makedirs(os.path.join(BASE, "seminar"), exist_ok=True)
 

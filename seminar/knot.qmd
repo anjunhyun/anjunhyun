@@ -42,306 +42,254 @@ function togglePdf(btn, boxId) {
 
 ---
 
-    <details>
+<details>
+<summary><strong>Week 1</strong></summary>
 
-    <summary><strong>Week 1</strong></summary>
+<h3>Slides</h3>
 
-    <br>
+<button class="pdf-toggle-btn" id="slide-btn-1"
+        onclick="togglePdf(this, 'slide-box-1')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    ### Slides
+<div class="pdf-preview-box" id="slide-box-1">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week1/slide.pdf"></iframe>
+</div>
 
-    <button class="pdf-toggle-btn" id="slide-btn-1"
-            onclick="togglePdf(this, 'slide-box-1')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
+<h3>Problems</h3>
 
-    <div class="pdf-preview-box" id="slide-box-1">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week1/slide.pdf"></iframe>
-    </div>
-    
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week1/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    ### Problems
+<h3>Solutions</h3>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week1/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week1/solution.pdf" target="_blank">
+📄 Solution Download
+</a>
 
-    ### Solutions
+</details>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week1/solution.pdf" target="_blank">
-    📄 Solution Download
-    </a>
-    
+---
 
-    </details>
+<details>
+<summary><strong>Week 2</strong></summary>
 
-    ---
-    
-    <details>
+<h3>Slides</h3>
 
-    <summary><strong>Week 2</strong></summary>
+<button class="pdf-toggle-btn" id="slide-btn-2"
+        onclick="togglePdf(this, 'slide-box-2')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    <br>
+<div class="pdf-preview-box" id="slide-box-2">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week2/slide.pdf"></iframe>
+</div>
 
-    ### Slides
+<h3>Problems</h3>
 
-    <button class="pdf-toggle-btn" id="slide-btn-2"
-            onclick="togglePdf(this, 'slide-box-2')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week2/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    <div class="pdf-preview-box" id="slide-box-2">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week2/slide.pdf"></iframe>
-    </div>
-    
+<h3>Solutions</h3>
 
-    ### Problems
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week2/solution.pdf" target="_blank">
+📄 Solution Download
+</a>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week2/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
+</details>
 
-    ### Solutions
+---
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week2/solution.pdf" target="_blank">
-    📄 Solution Download
-    </a>
-    
+<details>
+<summary><strong>Week 3</strong></summary>
 
-    </details>
+<h3>Slides</h3>
 
-    ---
-    
-    <details>
+<button class="pdf-toggle-btn" id="slide-btn-3"
+        onclick="togglePdf(this, 'slide-box-3')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    <summary><strong>Week 3</strong></summary>
+<div class="pdf-preview-box" id="slide-box-3">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week3/slide.pdf"></iframe>
+</div>
 
-    <br>
+<h3>Problems</h3>
 
-    ### Slides
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week3/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    <button class="pdf-toggle-btn" id="slide-btn-3"
-            onclick="togglePdf(this, 'slide-box-3')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
+<h3>Solutions</h3>
 
-    <div class="pdf-preview-box" id="slide-box-3">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week3/slide.pdf"></iframe>
-    </div>
-    
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week3/solution.pdf" target="_blank">
+📄 Solution Download
+</a>
 
-    ### Problems
+</details>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week3/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
+---
 
-    ### Solutions
+<details>
+<summary><strong>Week 4</strong></summary>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week3/solution.pdf" target="_blank">
-    📄 Solution Download
-    </a>
-    
+<h3>Slides</h3>
 
-    </details>
+<button class="pdf-toggle-btn" id="slide-btn-4"
+        onclick="togglePdf(this, 'slide-box-4')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    ---
-    
-    <details>
+<div class="pdf-preview-box" id="slide-box-4">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week4/slide.pdf"></iframe>
+</div>
 
-    <summary><strong>Week 4</strong></summary>
+<h3>Problems</h3>
 
-    <br>
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week4/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    ### Slides
+<h3>Solutions</h3>
 
-    <button class="pdf-toggle-btn" id="slide-btn-4"
-            onclick="togglePdf(this, 'slide-box-4')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week4/solution.pdf" target="_blank">
+📄 Solution Download
+</a>
 
-    <div class="pdf-preview-box" id="slide-box-4">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week4/slide.pdf"></iframe>
-    </div>
-    
+</details>
 
-    ### Problems
+---
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week4/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
+<details>
+<summary><strong>Week 5</strong></summary>
 
-    ### Solutions
+<h3>Slides</h3>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week4/solution.pdf" target="_blank">
-    📄 Solution Download
-    </a>
-    
+<button class="pdf-toggle-btn" id="slide-btn-5"
+        onclick="togglePdf(this, 'slide-box-5')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    </details>
+<div class="pdf-preview-box" id="slide-box-5">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week5/slide.pdf"></iframe>
+</div>
 
-    ---
-    
-    <details>
+<h3>Problems</h3>
 
-    <summary><strong>Week 5</strong></summary>
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week5/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    <br>
+<h3>Solutions</h3>
 
-    ### Slides
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week5/solution.pdf" target="_blank">
+📄 Solution Download
+</a>
 
-    <button class="pdf-toggle-btn" id="slide-btn-5"
-            onclick="togglePdf(this, 'slide-box-5')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
+</details>
 
-    <div class="pdf-preview-box" id="slide-box-5">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week5/slide.pdf"></iframe>
-    </div>
-    
+---
 
-    ### Problems
+<details>
+<summary><strong>Week 6</strong></summary>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week5/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
+<h3>Slides</h3>
 
-    ### Solutions
+<button class="pdf-toggle-btn" id="slide-btn-6"
+        onclick="togglePdf(this, 'slide-box-6')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week5/solution.pdf" target="_blank">
-    📄 Solution Download
-    </a>
-    
+<div class="pdf-preview-box" id="slide-box-6">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week6/slide.pdf"></iframe>
+</div>
 
-    </details>
+<h3>Problems</h3>
 
-    ---
-    
-    <details>
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week6/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    <summary><strong>Week 6</strong></summary>
+<h3>Solutions</h3>
 
-    <br>
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week6/solution.pdf" target="_blank">
+📄 Solution Download
+</a>
 
-    ### Slides
+</details>
 
-    <button class="pdf-toggle-btn" id="slide-btn-6"
-            onclick="togglePdf(this, 'slide-box-6')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
+---
 
-    <div class="pdf-preview-box" id="slide-box-6">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week6/slide.pdf"></iframe>
-    </div>
-    
+<details>
+<summary><strong>Week 7</strong></summary>
 
-    ### Problems
+<h3>Slides</h3>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week6/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
+<button class="pdf-toggle-btn" id="slide-btn-7"
+        onclick="togglePdf(this, 'slide-box-7')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    ### Solutions
+<div class="pdf-preview-box" id="slide-box-7">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week7/slide.pdf"></iframe>
+</div>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week6/solution.pdf" target="_blank">
-    📄 Solution Download
-    </a>
-    
+<h3>Problems</h3>
 
-    </details>
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week7/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    ---
-    
-    <details>
+</details>
 
-    <summary><strong>Week 7</strong></summary>
+---
 
-    <br>
+<details>
+<summary><strong>Week 8</strong></summary>
 
-    ### Slides
+<h3>Slides</h3>
 
-    <button class="pdf-toggle-btn" id="slide-btn-7"
-            onclick="togglePdf(this, 'slide-box-7')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
+<button class="pdf-toggle-btn" id="slide-btn-8"
+        onclick="togglePdf(this, 'slide-box-8')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    <div class="pdf-preview-box" id="slide-box-7">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week7/slide.pdf"></iframe>
-    </div>
-    
+<div class="pdf-preview-box" id="slide-box-8">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week8/slide.pdf"></iframe>
+</div>
 
-    ### Problems
+<h3>Problems</h3>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week7/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week8/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    </details>
+</details>
 
-    ---
-    
-    <details>
+---
 
-    <summary><strong>Week 8</strong></summary>
+<details>
+<summary><strong>Week 9</strong></summary>
 
-    <br>
+<h3>Slides</h3>
 
-    ### Slides
+<button class="pdf-toggle-btn" id="slide-btn-9"
+        onclick="togglePdf(this, 'slide-box-9')">
+  <span class="arrow">▶</span> Slide Preview
+</button>
 
-    <button class="pdf-toggle-btn" id="slide-btn-8"
-            onclick="togglePdf(this, 'slide-box-8')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
+<div class="pdf-preview-box" id="slide-box-9">
+  <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week9/slide.pdf"></iframe>
+</div>
 
-    <div class="pdf-preview-box" id="slide-box-8">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week8/slide.pdf"></iframe>
-    </div>
-    
+<h3>Problems</h3>
 
-    ### Problems
+<a href="../assets/seminar/Introduction_to_KnotTheory/Week9/problem.pdf" target="_blank">
+📄 Problem Download
+</a>
 
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week8/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
+</details>
 
-    </details>
-
-    ---
-    
-    <details>
-
-    <summary><strong>Week 9</strong></summary>
-
-    <br>
-
-    ### Slides
-
-    <button class="pdf-toggle-btn" id="slide-btn-9"
-            onclick="togglePdf(this, 'slide-box-9')">
-      <span class="arrow">▶</span> Slide Preview
-    </button>
-
-    <div class="pdf-preview-box" id="slide-box-9">
-      <iframe data-src="../assets/seminar/Introduction_to_KnotTheory/Week9/slide.pdf"></iframe>
-    </div>
-    
-
-    ### Problems
-
-    <a href="../assets/seminar/Introduction_to_KnotTheory/Week9/problem.pdf" target="_blank">
-    📄 Problem Download
-    </a>
-    
-
-    </details>
-
-    ---
-    
+---
