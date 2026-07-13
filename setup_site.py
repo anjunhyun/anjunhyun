@@ -274,7 +274,7 @@ title: "Introduction to Knot Theory"
     # 목차
     for w in weeks:
         num = re.search(r'\d+', w).group()
-        content += f"- [Week {num}](#week-{num})\n"
+        content += f"- Week {num}\n"
 
     content += "\n---\n"
 
@@ -286,29 +286,59 @@ title: "Introduction to Knot Theory"
         slide_box_id = f"slide-box-{num}"
         slide_btn_id = f"slide-btn-{num}"
 
+        problem_file = os.path.join(
+            BASE, "assets", "seminar", SEMINAR_NAME, w, "problem.pdf"
+        )
+
+        solution_file = os.path.join(
+            BASE, "assets", "seminar", SEMINAR_NAME, w, "solution.pdf"
+        )
+
         content += f"""
-## Week {num} {{#week-{num}}}
+    <details>
 
-### Slides
+    <summary><strong>Week {num}</strong></summary>
 
-<button class="pdf-toggle-btn" id="{slide_btn_id}"
-        onclick="togglePdf(this, '{slide_box_id}')">
-  <span class="arrow">▶</span> Slide 미리보기
-</button>
-<div class="pdf-preview-box" id="{slide_box_id}">
-  <iframe data-src="{base_path}/slide.pdf"></iframe>
-</div>
+    <br>
 
-### Problems
+    ### Slides
 
-<a href="{base_path}/problem.pdf" target="_blank">📄 Problem 다운로드</a>
+    <button class="pdf-toggle-btn" id="{slide_btn_id}"
+            onclick="togglePdf(this, '{slide_box_id}')">
+      <span class="arrow">▶</span> Slide Preview
+    </button>
 
-### Solutions
+    <div class="pdf-preview-box" id="{slide_box_id}">
+      <iframe data-src="{base_path}/slide.pdf"></iframe>
+    </div>
+    """
 
-<a href="{base_path}/solution.pdf" target="_blank">📄 Solution 다운로드</a>
+        if os.path.exists(problem_file):
+            content += f"""
 
----
-"""
+    ### Problems
+
+    <a href="{base_path}/problem.pdf" target="_blank">
+    📄 Problem Download
+    </a>
+    """
+
+        if os.path.exists(solution_file):
+            content += f"""
+
+    ### Solutions
+
+    <a href="{base_path}/solution.pdf" target="_blank">
+    📄 Solution Download
+    </a>
+    """
+
+        content += """
+
+    </details>
+
+    ---
+    """
 
     os.makedirs(os.path.join(BASE, "seminar"), exist_ok=True)
 
@@ -342,4 +372,7 @@ if __name__ == "__main__":
 
     print("\n✅ DONE")
     print("➡️  Run:")
+    print('''git add .\n
+git commit -m "restore research and cv"\n
+git push origin main''')
     print('quarto publish gh-pages') # 빌드 + 배포 한번에
