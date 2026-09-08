@@ -1,7 +1,7 @@
 import os
 import re
 
-BASE = "C:/Users/user/Desktop/personal_site"
+BASE = os.path.dirname(os.path.abspath(__file__))
 SEMINAR_NAME = "Introduction_to_KnotTheory"
 
 
@@ -111,6 +111,9 @@ title: "Research & Publications"
 - **Subsampling Confidence Bound for Persistent Diagram via Time-delay Embedding**
   <br> [[arXiv]](https://arxiv.org/abs/2512.06324)
   [[PDF]](https://arxiv.org/pdf/2512.06324)
+
+- **A Rank-Weighted Coloring Polynomial and the Partial-Dual Genus Polynomial**
+  <br> [[PDF]](assets/Coloring_Polynomial_of_Partial_Dual_genus_polynomial.pdf)
 """
 
     cv_content = """---
@@ -198,9 +201,7 @@ title: "Curriculum Vitae"
     }
 
     # index.qmd: 이미 있으면 건너뜀 (프로필 사진 등 직접 편집 가능성)
-    create_if_missing = {
-	None,
-    }
+    create_if_missing = {}
 
     for name, content in always_overwrite.items():
         path = os.path.join(BASE, name)
