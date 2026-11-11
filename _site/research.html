@@ -170,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p><strong>On the Computational Complexity and Approximation of the General Routing Problem in Euclidean Graphs</strong> <br> <a href="assets/GRP_in_Euclidean_Graph.pdf">[PDF]</a></p></li>
 <li><p><strong>Subsampling Confidence Bound for Persistent Diagram via Time-delay Embedding</strong> <br> <a href="https://arxiv.org/abs/2512.06324">[arXiv]</a> <a href="https://arxiv.org/pdf/2512.06324">[PDF]</a></p></li>
-<li><p><strong>Coloring Polynomial of Partial Dual Genus Polynomial</strong> <br> <a href="assets/Coloring_Polynomial_of_Partial_Dual_genus_polynomial.pdf">PDF</a></p></li>
+<li><p><strong>A Rank-Weighted Coloring Polynomial and the Partial-Dual Genus Polynomial</strong> <br> <a href="assets/Coloring_Polynomial_of_Partial_Dual_genus_polynomial.pdf">[PDF]</a></p></li>
 </ul>
 
 
@@ -250,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/anjunhyun\.github\.io\/anjunhyun\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

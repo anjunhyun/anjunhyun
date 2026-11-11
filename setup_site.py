@@ -114,6 +114,9 @@ title: "Research & Publications"
 
 - **A Rank-Weighted Coloring Polynomial and the Partial-Dual Genus Polynomial**
   <br> [[PDF]](assets/Coloring_Polynomial_of_Partial_Dual_genus_polynomial.pdf)
+
+- **Contractible 4-Manifolds with Nonnegative Ricci Curvature and Euclidean Volume Growth**
+  <br> [[PDF]](assetsContractible_4Manifolds_with_Nonnegative_Ricci_Curvature_and_Euclidean_Volume_Growth.pdf)
 """
 
     cv_content = """---
