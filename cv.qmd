@@ -9,9 +9,10 @@ title: "Curriculum Vitae"
 
 ## Research Interests
 
-- Knot Theory
+- Combinatorical Topology
 - Graph Theory
-- Topological Data Analysis (TDA)
+- Knot Theory
+- Low-Dimensional Topology
 
 <br>
 

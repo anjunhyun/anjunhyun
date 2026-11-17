@@ -84,7 +84,7 @@ about:
 ## Biography
 
 I am a undergraduate student in the **Department of Statistics at Seoul National University (SNU)**. 
-My research interests lie at the intersection of **Graph Theory**, **Knot Theory**, and **Topological Data Analysis (TDA)**.
+My research interests lie at the intersection of **Combinatorical Topology**, **Graph Theory**, **Knot Theory**, and **Low-Dimensional Topology**.
 
 ## Education
 
@@ -93,10 +93,10 @@ My research interests lie at the intersection of **Graph Theory**, **Knot Theory
 
 ## Interests
 
-- Knot Theory
+- Combinatorical Topology
 - Graph Theory
-- Algebraic Topology & Persistent Homology
-- Statistical Inference for TDA
+- Knot Theory
+- Low-Dimensional Topology
 """
 
     research_content = """---
@@ -130,9 +130,10 @@ title: "Curriculum Vitae"
 
 ## Research Interests
 
-- Knot Theory
+- Combinatorical Topology
 - Graph Theory
-- Topological Data Analysis (TDA)
+- Knot Theory
+- Low-Dimensional Topology
 
 <br>
 
